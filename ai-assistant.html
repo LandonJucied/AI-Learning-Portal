@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ask the AI Learning Portal assistant about artificial intelligence, prompting, coding, and responsible AI use.">
+<title>AI Assistant | AI Learning Portal</title><link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="portal-header">
+<a aria-label="AI Learning Portal home" class="portal-brand" href="index.html"><span aria-hidden="true" class="portal-brand-mark">AI</span><span class="portal-brand-copy"><strong>AI Learning Portal</strong><small>INTERACTIVE AI EDUCATION</small></span></a>
+<nav aria-label="Main navigation"><a href="index.html">Home</a><a href="learn.html">Learn</a><a href="challenges.html">Challenges</a><a href="dashboard.html">Dashboard</a><a href="glossary.html">Glossary</a><a href="resources.html">Resources</a><a aria-current="page" href="ai-assistant.html">AI Assistant</a><a href="about.html">About</a></nav>
+<button class="accessibility-button" id="accessibilityButton" type="button">Accessibility <span aria-hidden="true">↗</span></button>
+</header>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" class="assistant-page">
+<section class="page-hero assistant-hero"><div><p class="eyebrow">YOUR DOCUMENT-POWERED LEARNING GUIDE</p><h1>Ask. Explore.<br><span>Understand AI.</span></h1><p>Ask questions about AI fundamentals, prompting, coding, research, and responsible AI. The assistant checks the portal's learning library and identifies the documents it used.</p><div class="hero-actions"><a class="button primary" href="#assistant-chat">Ask a Question ↓</a><a class="button secondary" href="learn.html">Explore Lessons</a></div></div><div class="assistant-orbit-card"><div class="assistant-orbit"><span>AI</span><i></i><b></b><em></em></div><span class="assistant-card-label">LEARNING ASSISTANT</span><strong>Curious is a good place to start.</strong><small>Grounded answers · Source hints · Student-friendly explanations</small></div></section>
+<section class="section assistant-layout" id="assistant-chat">
+<aside class="assistant-sidebar"><p class="eyebrow">TRY ASKING</p><h2>Start with a question.</h2><p>Choose a prompt to get started, or type your own question.</p>
+<button class="suggestion-chip" type="button" data-question="Explain the difference between artificial intelligence, machine learning, and neural networks."><span>01</span> AI fundamentals</button>
+<button class="suggestion-chip" type="button" data-question="Help me improve this prompt and explain what makes the improved version stronger: Tell me about climate change."><span>02</span> Improve a prompt</button>
+<button class="suggestion-chip" type="button" data-question="How can I check whether an AI-generated answer is accurate? Give me a practical checklist."><span>03</span> Verify an answer</button>
+<button class="suggestion-chip" type="button" data-question="What should I consider before using AI for a school assignment? Explain academic honesty, privacy, and disclosure."><span>04</span> Responsible AI</button>
+<div class="assistant-safety-note"><span aria-hidden="true">ⓘ</span><p>Don't enter passwords, private information, or confidential school records. AI can make mistakes, so verify important claims.</p></div>
+</aside>
+<div class="assistant-chat-shell">
+<div class="assistant-chat-top"><div class="assistant-avatar" aria-hidden="true">AI</div><div><strong>Portal Learning Assistant</strong><span><i></i> Document library enabled</span></div><button id="clearChatButton" class="chat-clear-button" type="button" title="Clear conversation">Clear chat</button></div>
+<div id="chatMessages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions text">
+<div class="chat-welcome"><div class="welcome-symbol" aria-hidden="true">✳</div><h2>What are you curious about?</h2><p>I'll look for relevant information in the portal's knowledge library and explain it in clear language.</p><div class="welcome-tags"><span>AI concepts</span><span>Prompting</span><span>Ethics</span><span>Coding</span></div></div>
+</div>
+<div class="chat-compose-wrap"><form id="assistantForm" class="chat-compose"><label class="sr-only" for="assistantQuestion">Ask the AI Learning Portal assistant a question</label><textarea id="assistantQuestion" name="question" rows="2" maxlength="1800" placeholder="Ask a question about AI..." required></textarea><button id="sendQuestionButton" type="submit"><span>Ask assistant</span><span aria-hidden="true">↗</span></button></form><div class="chat-compose-meta"><span id="chatStatus" role="status">Ready when you are</span><span id="characterCount">0 / 1800</span></div></div>
+</div>
+</section>
+<section class="section assistant-how"><div class="section-heading"><p class="eyebrow">HOW IT WORKS</p><h2>Answers with a learning purpose.</h2><p>The assistant searches the knowledge files deployed with this website and uses matching passages to help answer a question.</p></div><div class="assistant-process-grid"><article><span>01</span><h3>Ask a question</h3><p>Type a question in everyday language or choose a suggested topic.</p></article><article><span>02</span><h3>Find useful passages</h3><p>The server searches the portal's approved Markdown and text resources for relevant material.</p></article><article><span>03</span><h3>Learn and verify</h3><p>The AI builds an explanation and lists the knowledge files that matched. Always verify important claims.</p></article></div></section>
+</main>
+<footer class="portal-footer"><div class="portal-footer-main"><div class="portal-footer-brand"><a class="portal-brand" href="index.html"><span aria-hidden="true" class="portal-brand-mark">AI</span><span class="portal-brand-copy"><strong>AI Learning Portal</strong><small>LEARN · PRACTICE · REFLECT</small></span></a><p>An interactive learning experience for understanding artificial intelligence, using AI tools, and making responsible decisions.</p><span class="footer-status"><i></i> Learning system ready</span></div><div><h3>Learning</h3><a href="learn.html#module-1">AI Fundamentals</a><a href="learn.html#module-2">Using AI Tools</a><a href="learn.html#module-3">AI Ethics &amp; Responsibility</a></div><div><h3>Practice</h3><a href="challenges.html#quiz">Knowledge Quiz</a><a href="challenges.html#prompt-challenge">Prompt Challenge</a><a href="challenges.html#ethics-challenge">Ethics Challenge</a></div><div><h3>Portal</h3><a href="dashboard.html">Dashboard</a><a href="glossary.html">AI Glossary</a><a href="resources.html">Resources</a><a href="ai-assistant.html">AI Assistant</a><a href="about.html">About</a></div></div><div class="portal-footer-bottom"><span>© 2026 AI Learning Portal</span><span>Built with semantic HTML, CSS, and JavaScript</span><a href="resources.html#references">View references and attribution →</a></div></footer>
+<script src="js/main.js"></script><script src="js/ai-assistant.js"></script>
+</body></html>
