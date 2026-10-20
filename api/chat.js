@@ -95,8 +95,10 @@ module.exports = async function handler(req, res) {
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: systemInstruction }] },
         contents,
-        generationConfig: { temperature: 0.35, maxOutputTokens: 900 }
-      })
+        generationConfig: { temperature: 0.35, maxOutputTokens: 700 }
+      }),
+      // Stop waiting before Vercel's 30-second function limit is reached.
+      signal: AbortSignal.timeout(20000)
     });
     const data = await upstream.json().catch(() => ({}));
     if (!upstream.ok) {
@@ -111,7 +113,10 @@ module.exports = async function handler(req, res) {
     if (!answer) return send(res, 502, { error: 'The AI service returned an empty answer. Please rephrase your question and try again.' });
     return send(res, 200, { answer, sources: sourceNames, knowledgeMatches: passages.length, model });
   } catch (error) {
-    console.error('Assistant network error:', error && error.message);
+    console.error('Assistant network error:', error && error.name, error && error.message);
+    if (error && error.name === 'TimeoutError') {
+      return send(res, 504, { error: 'The AI service took too long to respond. Please try again in a moment.' });
+    }
     return send(res, 502, { error: 'Could not connect to the AI service. Check the deployment and try again.' });
   }
 };
